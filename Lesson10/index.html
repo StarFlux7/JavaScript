@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>StarFlux</title>
+
+    <link rel="stylesheet" href="styles1.css">
+
+</head>
+
+<body>
+
+
+<script>
+
+    fetch('https://jsonplaceholder.typicode.com/users')
+        .then(response => response.json())
+
+        .then(users => users.forEach(user =>{
+
+            let divGen = document.createElement('div')
+            document.body.appendChild(divGen);
+            divGen.classList.add('divGen');
+
+            let divGen2 = document.createElement('div');
+            divGen.appendChild(divGen2);
+            divGen2.classList.add('divGen2');
+
+            let div1 = document.createElement('div');
+            div1.innerText = user.id;
+            divGen2.appendChild(div1);
+
+            let div2 = document.createElement('div');
+            div2.innerText = user.name;
+            divGen2.appendChild(div2);
+
+            let divBtn = document.createElement('div');
+            divGen.appendChild(divBtn);
+
+            let btn1 = document.createElement('button');
+            btn1.addEventListener('click', () => {
+                location.href = `user-details.html?user=${JSON.stringify(user)}`;
+            });
+            btn1.innerText = 'Click';
+            divBtn.appendChild(btn1);
+
+
+
+
+
+        }));
+
+
+
+
+</script>
+
+</body>
+</html>

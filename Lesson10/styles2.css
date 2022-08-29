@@ -1,0 +1,34 @@
+.div {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    background-color: gray;
+    border: 1px solid black;
+}
+
+.postDiv {
+    box-sizing: border-box;
+    padding: 10px;
+    height: 100%;
+    width: 25%;
+}
+
+.generalBlock {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: lightgray;
+    border: 1px solid black;
+    height: 500px;
+}
+
+.commentBlock {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 50%;
+    box-sizing: border-box;
+    border: 1px solid cornflowerblue;
+}
